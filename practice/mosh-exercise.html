@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      //fizzBuzz
+      // function fizzBuzz(input) {
+      //   if (typeof input !== "number") return "not a number";
+      //   else if (input % 3 === 0 && input % 5 === 0) return "fizzbuzz";
+      //   else if (input % 5 === 0) return "buzz";
+      //   else if (input % 3 === 0) return "fizz";
+      //   else if (input % 3 !== 0 && input % 5 !== 0) return input;
+      // }
+      // console.log(fizzBuzz(7));
+
+      // // demerit point
+      // checkSpeed(75);
+      // function checkSpeed(speed) {
+      //   const speedLimit = 70;
+      //   const kmPerPoint = 5;
+      //   if (speed < speedLimit+kmPerPoint) {
+      //     console.log("ok");
+      //   } else {
+      //     let points = (speed - speedLimit) / kmPerPoint;
+      //     let intNumber = Math.floor(points);
+
+      //     if (intNumber >= 12) {
+      //       console.log("license suspended");
+      //     } else {
+      //       console.log(`point : ${intNumber}`);
+      //     }
+      //   }
+      // }
+
+      // // even and odd Number
+      // showNumbers(10);
+      // function showNumbers(limit) {
+      //   for (let i = 0; i <= limit; i++) {
+      //     if (i % 2 === 0) console.log(i, "EVEN");
+      //     else  console.log(i,"ODD")
+
+      //   }
+      // }
+
+      //  // count Truthy by for of loop
+      //     const array = [0, "", 9, 1, 2, 3];
+      //     function countTruthy() {
+      //       let count = 0;
+
+      //       for (let value of array) {
+      //         if (value) count++;
+      //       }
+      //       console.log(count);
+      //     }
+      //     countTruthy();
+
+      //  const movie ={
+      //   title: 'a',
+      //   releaseYear:2018,
+      //   rating: 4.5,
+      //   director:'b'
+      //  }
+      //  function showProperties(obj){
+      //   for(let Properties in obj){
+      //     if(typeof obj[Properties] ==='string')
+      //       console.log(Properties,obj[Properties])
+      //   }
+      //  }
+      //  showProperties(movie);
+
+      // // sum(10);
+
+      // function sum(limit) {
+      //   let sum =0;
+
+      //   for (let i=0; i<=limit; i++)
+      //     if(i%3===0 || i%5===0)
+      //    sum +=i;
+      //        console.log(sum);
+      // }
+
+      // console.log(sum(10));
+
+      // function sum(limit) {
+      //   let sum = 0;
+      //   for (let i = 0; i <= limit; i++)
+      //     if (i % 3 === 0 || i % 5 === 0)
+      //       sum += i;
+
+      //     return sum;
+      // }
+
+      // const marks = [80,80,80];
+
+      //      function calculateGrade(marks){
+      //       const avarage = calculateAverage(marks);
+      //       if(avarage>=1 && avarage<59)
+      //          return 'F';
+      //         else if(avarage>=60 && avarage<69)
+      //          return 'D';
+      //          else if(avarage>=70 && avarage<79)
+      //          return 'C';
+      //          else if(avarage>=80 && avarage<89)
+      //          return 'B';
+      //          else if(avarage>=90 && avarage<100)
+      //          return 'A';
+
+      //      }
+      //      function calculateAverage(array){
+      //       let sum =0;
+      //          for(let value of array)
+      //             sum+=value;
+      //             return sum / array.length;
+
+      //      }
+      //      console.log(calculateGrade(marks));
+
+      // showStars(5);
+
+      // function showStars(rows) {
+      //   for (let i = 0; i <= rows; i++) {
+      //     let pattern = "";
+      //     for (let j = 0; j < i; j++)
+      //      pattern += "*";
+      //     console.log(pattern);
+      //   }
+      // }
+
+      //  // // prime Number
+      //   showPrimes();
+
+      //   function showPrimes() {
+      //     for (let i = 2; i <=20 ; i++) {
+      //       let isPrime = true;
+      //       for (let j = 2; j < i; j++) {
+      //         if (i % j === 0) {
+      //           isPrime = false;
+      //           break;
+      //         }
+      //       }
+      //       if (isPrime) console.log(i);
+      //     }
+      //   }
+
+      // const number = array(900, 100);
+      // console.log(number);
+      // function array(min, max) {
+      //   const outPut = [];
+      //   for (let i = min; i <= max; i++) outPut.push(i);
+      //   return outPut;
+      // }
+
+      // // to check if a number is the member of an array
+      //  const numbers =[1,23,4,5,6];
+      //  function includes(numbers, element){
+      //     for( let value of numbers)
+      //       if(value ===element)
+      //          return true;
+      //           return false;
+      //  }
+      //  console.log(includes(numbers ,23));
+
+      // // exclude some value from array
+      // const numbers =[1,2,3,4,6]
+      // const outPut = except(numbers ,[6,3])
+      // console.log(outPut)
+      // function except(array, exclude){
+      //       const outPut =[];
+      //       for( let value of array)
+      //           if(!exclude.includes(value))
+      //           outPut.push(value)
+      //         return outPut;
+      // }
+
+      //  // counting the number of time the value is repeated using for in loop
+      // const number =[1,2,3,4,4,4,4,4,5,3,3,3,3,3]
+      //  function countOccurrences(array, searchElement){
+      //  let count =0;
+      //    for(let value of array)
+      //     if(value ===searchElement){
+      //      count+=1
+      //     }
+      //     console.log(count)
+
+      //  };
+      // countOccurrences(number,3)
+
+      //  // counting the number of time the value is repeated using reduce() method
+      // const number =[1,2,3,4,4,4,4,4,5,3,3,3,3,3];
+
+      // console.log(countOccurrences(number,4))
+      // function countOccurrences(array, element){
+      //     return number.reduce((acc, cre) =>{
+      //          if(cre === element)
+      //          return acc + 1;
+      //           else return acc;
+
+      //       }, 0)
+      // }
+
+      // const numbers = [1, 2, 3, 4];
+
+      // const maxValue = getMax(numbers);
+      // console.log(maxValue);
+      // function getMax(array) {
+      //   let max = 0;
+      //   for (let value of array)
+      //   if (value > max)
+      //     return value;
+
+      //     else return max;
+      // }
+
+      // // reduce method
+      // const numbers = [1, 100, 3, 4, 5];
+
+      // const maxValue = getMax(numbers);
+      // console.log(maxValue);
+      // function getMax(array) {
+      //   return numbers.reduce((acc, cre) => {
+      //     if (array.length === 0) return undefined;
+      //     if (acc < cre) return cre;
+      //     return acc;
+      //   });
+      // }
+
+      // const movies = [
+      //   { title: "a", year: 2018, rating: 4.5 },
+      //   { title: "b", year: 2018, rating: 4.7 },
+      //   { title: "c", year: 2018, rating: 3 },
+      //   { title: "d", year: 2017, rating: 4.5 },
+      // ];
+
+      // const all = movies
+      //   .filter((m => m.year === 2018 && m.rating > 4))
+      //   .sort((a, b) => {
+      //     if (a.rating > b.rating) return 1;
+      //     if (a.rating < b.rating) return 1;
+      //     if ((a.rating = b.rating)) return 0;
+      //   })
+      //   .reverse()
+      //    .map(m =>m.title);
+      // console.log(all);
+
+      // // argument
+      //   function sum(){
+      //     let total =0;
+      //     for(let value of arguments)
+      //     total +=value;
+      //   return total;
+      //   }
+
+      //   console.log(sum(1,2,3,4,5,100))
+
+      // // //rest operator
+      // function sum(discount, ...price) {
+      //   const total = price.reduce((a, b) => a + b);
+      //   return total * (1 - discount);
+      // }
+
+      // console.log(sum(0.5, 30, 30));
+
+      // // defualt parameter
+      // function interest(principal, rate = 2.5, years = 1) {
+      //   return ((principal * rate) / 100) * years;
+      // }
+      // console.log(interest(10000));
+
+      // // getters and setters
+      // getters => to access properties
+      // setter => to change(mutate) them
+
+      // function sum(...para) {
+      //   if (para.length === 1 && Array.isArray(para[0])) para = [...para[0]];
+      //   return para.reduce((a, c) => a + c);
+      // }
+      // const value = sum([100, 2, 3, 4, 5]);
+      // console.log(value);
+
+      // //try and catch
+
+      // const person = {
+      //   firstName: "wonde",
+      //   lastName: "terefe",
+      //   get fullName() {
+      //     return `${person.firstName} ${person.lastName}`;
+      //   },
+      //   set fullName(value) {
+      //     if (typeof value !== "string")
+      //       throw new Error("value is not a string.");
+      //     if(value.length <2)
+      //       throw new Error("enter full name");
+
+      //     const parts = value.split(" ");
+      //     console.log(parts);
+      //     this.firstName = parts[0];
+      //     this.lastName = parts[1];
+      //   },
+      // };
+      // try {
+      //   person.fullName = '';
+      // } catch (e) {
+      //   alert(e);
+      // }
+      // console.log(person);
+
+      // // this keyword
+      // const video = {
+      //   title: "a",
+      //   play() {
+      //     console.log(this);
+      //   },
+      // };
+      // video.play();
+
+      // function video() {
+      //   console.log(this);
+      // }
+      // video();
+      // what if it is constracter function
+
+      //  const video ={
+      //   title: 'a',
+      //   tags: ['one','two','three','four'],
+      //   showTags(){
+      //     // this.title ='name'
+      //     this.tags.forEach((tag) =>{
+      //       console.log(this);
+      //     });
+      //   }
+      //  }
+      //    video.showTags()
+
+      // let twoSum = function(array, target){
+
+      //   return array.reduce((a, c) => {
+
+      //   });
+      // }
+      // console.log(twoSum(nums, 9))
+
+      // const nums = [2, 5, 7, 15];
+      // const result = twoSum(nums,9);
+      // console.log(result);
+
+      // function twoSum(nums, target) {
+      //   for (let i = 0; i <= nums.length; i++) {
+      //     for (let j = i + 1; j <= nums.length; j++) {
+      //       if (nums[i] + nums[j] === target) {
+      //           return[i,j];
+      //       }
+      //     }
+      //   }
+      //   return [];
+      // }
+     
+    console.log('1');
+    setTimeout( () =>{
+      console.log('2')
+    },1000)
+    console.log('3');
+  
+
+    </script>
+  </body>
+</html>

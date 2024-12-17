@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mosh-lesson</title>
+  </head>
+  <body>
+    <script>
+      // //  //  factoty functon
+      //  function factoryFunction(name){
+      //       return  {
+      //             name,
+      //             dep(){
+      //              console.log(`${name} is electrical student  `)
+      //             },
+      //             }
+      //         };
+      //    const me = factoryFunction('wonde');
+      //      console.log(me.dep())
+      //      const me2 = factoryFunction('henok');
+      //      console.log(me2.dep())
+
+      //constructer function
+      //name convention is different here we use pascal notation the first letter also capital letter
+
+      //   function Circle(radius) {
+      //     this.radius = radius;
+      //     this.draw =function(){
+      //         console.log('draw');
+      //   }
+      // }
+
+      //  Circle.call({}, )
+
+      //  const circle =new Circle(1);
+
+      // const circle ={
+      //   radius: 1,
+      //   draw() {
+      //     console.log('draw');
+      //   }
+      // }
+      // for(let key in circle)
+      //   console.log(key,circle[key])
+      // for(let entry of Object.entries(circle))
+      // console.log(entry)
+      // // another[key] =circle[key]
+
+      // // address exercise
+      // const address = {
+      //   street: "atote",
+      //   city: "hawassa",
+      //   zipCode: 1000,
+      // };
+      // function showAddress(address) {
+      //   for (let key in address) console.log(key, address[key]);
+      // }
+      // showAddress(address);
+
+      // // factory function
+      // const address = function (street, city, zipCode) {
+      //   return {
+      //     street,
+      //     city,
+      //     zipCode,
+      //   };
+      // };
+
+      // const factoryFunction = address("atote", "hawassa", "1000");
+      // console.log(factoryFunction);
+
+      // //constractor function
+      // function Address(street, city, zipCode) {
+      //   (this.street = street), (this.city = city), (this.zipCode = zipCode);
+      // }
+      // const add = new Address("atote", "hawassa", 1000);
+      // const add2 = new Address("atote", "hawassa", 1000);
+      // let add3 = add;
+      // console.log(add);
+      // console.log(add2);
+      // areEqual(add, add2);
+      // areSame(add, add3);
+
+      // function areEqual(add, add2) {
+      //   for (let key in add) console.log(add[key] === add2[key]);
+      // }
+
+      // function areSame() {
+      //   console.log(add == add3);
+      // }
+
+      // function Price(min, max, symbol) {
+      //   (this.minPrice = min),
+      //     (this.maxPrice = max),
+      //     (this.buttonSymbol = symbol);
+      //   }
+      // const chip = new Price(3, 4, 5);
+      // const moderate = new Price(3, 4, 5);
+      // const expensive = new Price(3, 4, 5);
+      // console.log(chip)
+      // console.log(moderate)
+      // console.log(expensive)
+
+      // const numbers = [1, 2, 3, 4, 4];
+
+      // console.log(numbers.includes(23));
+      //  console.log(numbers.lastIndexOf(66));
+
+      // for find method we have to pass function as parameter
+      //  const courses =[1,2,3,5,'33']
+      //   let found = courses.find( courses =>{
+      //         return courses.name === '33' ;
+      //    })
+      // console.log(found);
+
+      // let numbers =[1,2,3,4]
+      // let another =numbers;
+      // // numbers =[];
+      // // console.log(another)
+
+      // //  numbers.length =0;
+
+      // //  splice method
+      // numbers.splice(0,numbers.length)
+      // console.log(numbers)
+
+      // combinig and sliceng array
+      // let first= [ 23,4,5];
+      // let second = [4, 5, 6];
+      // first[0].id = 20;
+      // const newArray = first.concat(second);
+      // console.log(newArray);
+      // const slice = newArray.splice(3);
+      // console.log(slice);
+
+      // let combined = [...first,3,100,...second];
+      // const copy =[...combined]
+      // console.log(copy)
+      // console.log(combined);
+
+      // // forEach array
+      // const numbers = [2, 3, 4, 5];
+      // numbers.forEach((key, index, array) => console.log(key, index, array));
+
+      // joining array
+      // const numbers = [2, 3, 4, 5];
+      // console.log(numbers.join('----'))
+      // console.log(numbers.join("/ "));
+
+      // const s ='this is string'
+      // console.log(s.split(' '))
+
+      // const numbers = [2, 3, 10];
+      // numbers.sort();
+      // console.log(numbers);
+      // numbers.reverse();
+      // console.log(numbers);
+
+      // const student = [
+      //   {
+      //     id: 122,
+      //     name: 'wonde'
+      //   },
+      //   {
+      //     id: 344,
+      //     name: 'bini'
+      //   },
+      // ];
+      // student.sort();
+      // console.log(student);
+
+      //
+      // const numbers = [12, 3, 3];
+      // const bool = numbers.some((value) => {
+      //   return value <= 0;
+      // });
+      // console.log(bool);
+
+      //   // filter method
+      //   const numbers = [12, 3, 3,-5];
+      //   const filter = numbers.filter( value =>{
+      //     return value>=0;
+      //   })
+      // console.log(filter )
+
+      // //map() method and chan rule with filter method
+      // const numbers = [1, 2, 3, 5];
+      // const item = numbers.map((name) => {
+      //   return { value: name };
+      // });
+      // console.log(item);
+
+      // // OR
+      // const number = [1, 2, 3, -5];
+      // const items = number
+      //   .filter((n) => n >= 0)
+      //   .map((n) => ({ value: n }))
+      //   .filter(obj => obj.value > 1)
+      // console.log(items);
+
+      // // finding the sum of the value the array by...for of loop 
+      // const number = [1, 2, 3, 0];
+
+      // let sum = 0;
+      // for (let value of number) sum += value;
+      // console.log(sum);
+      
+
+    //   // but there is another option....reduce() method
+    //   const number = [1, 2, 3, 10];
+
+    //   const sum = number.reduce((acc, current) => {
+    //     return acc + current;
+    //   },1);
+    //   console.log(sum);
+    // </script>
+  </body>
+</html>
